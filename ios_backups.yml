@@ -1,0 +1,13 @@
+---
+- name: Backup Cisco IOS Config
+  hosts: routers
+  connection: network_cli
+  gather_facts: no
+  tasks:
+    - name: Backup Config
+      ios_config:
+        backup: yes
+        backup_options:
+          dir_path: "routerBackups"
+          filename: "{{inventory_hostname}}.config"
+...

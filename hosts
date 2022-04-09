@@ -1,0 +1,11 @@
+[routers]
+vRTR1 ansible_host=192.168.108.11
+vRTR2 ansible_host=192.168.108.12
+vRTR3 ansible_host=192.168.108.13
+
+
+[routers:vars]
+ansible_user=olson
+ansible_ssh_pass=olson123
+ansible_network_os=ios
+ansbile_become=no
